@@ -5,7 +5,7 @@
   <!-- Basic Page Needs
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <meta charset="utf-8">
-  <title>Your page title here :)</title>
+  <title>Was kostet ein Brief?</title>
   <meta name="description" content="">
   <meta name="author" content="">
 
@@ -22,6 +22,41 @@
   <link rel="stylesheet" href="css/normalize.css">
   <link rel="stylesheet" href="css/skeleton.css">
 
+  <style type="text/css">
+
+    body {
+      background: rgb(255,205,0);
+      color:#666;
+    }
+    .stamp {
+      width: 280px;
+      height: 180px;
+      display: inline-block;
+      padding: 10px;
+      background: white;
+      position: relative;
+      -webkit-filter: drop-shadow(0px 0px 10px rgba(0,0,0,0.5));
+      /*The stamp cutout will be created using crisp radial gradients*/
+      background: radial-gradient(
+        transparent 0px,
+        transparent 4px,
+        white 4px,
+        white
+      );
+
+      /*reducing the gradient size*/
+      background-size: 20px 20px;
+      /*Offset to move the holes to the edge*/
+      background-position: -10px -10px;
+    }
+    .stamp .inner {
+      background-color:#fff;
+      width:260px;
+      height:160px;
+      padding:10px;
+    }
+  </style>
+
   <!-- Favicon
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <link rel="icon" type="image/png" href="images/favicon.png">
@@ -33,9 +68,12 @@
   –––––––––––––––––––––––––––––––––––––––––––––––––– -->
   <div class="container">
     <div class="row">
-      <div class="one-half column" style="margin-top: 25%">
-        <h4>Basic Page</h4>
-        <p>This index.html page is a placeholder with the CSS, font and favicon. It's just waiting for you to add some content! If you need some help hit up the <a href="http://www.getskeleton.com">Skeleton documentation</a>.</p>
+      <div class="one-third column offset-by-four" style="margin-top: 25%">
+        <div class="stamp">
+          <div class="inner">
+            <h1>70&#8202;c</h1>
+          </div>
+        </div>
       </div>
     </div>
   </div>
