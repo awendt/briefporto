@@ -93,6 +93,20 @@
 
     var d = [[1009843200000, 56], [1041379200000, 55], [1072915200000, 55], [1104537600000, 55], [1136073600000, 55], [1167609600000, 55], [1199145600000, 55], [1230768000000, 55], [1262304000000, 55], [1293840000000, 55], [1325376000000, 55], [1356998400000, 58], [1388534400000, 60], [1420070400000, 62], [1451606400000, 70]];
 
+    var years = d.map(function(array) {
+      return [new Date(array[0]).getFullYear(), array[1]]
+    });
+
+    var current_postage = years.reduce(function(previousValue, currentValue, currentIndex, array) {
+      if (previousValue[0] == new Date().getFullYear()) {
+        return previousValue;
+      } else {
+        return currentValue;
+      }
+    });
+
+    $("h1").text(current_postage[1]);
+
     $.plot("#plot", [{data: d, points: { show: true }, lines: { show: true }}], {
       xaxis: { mode: 'time' },
       yaxis: { position: 'right' },
